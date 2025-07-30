@@ -20,7 +20,7 @@ public class Medicine {
     private String batch;
 
     @PositiveOrZero(message = "Quantity must be zero or positive")
-    private int quantity;
+    private int stock;
 
     @Positive(message = "Price must be positive")
     private double price;
