@@ -64,7 +64,7 @@ public class MedicineService {
     }
 
     public List<MedicineDTO> getLowStockMedicines(int threshold) {
-        return medicineRepository.findByQuantityLessThanEqual(threshold)
+        return medicineRepository.findByStockLessThanEqual(threshold) // Changed from quantity to stock
                 .stream()
                 .map(this::convertToDto)
                 .collect(Collectors.toList());
