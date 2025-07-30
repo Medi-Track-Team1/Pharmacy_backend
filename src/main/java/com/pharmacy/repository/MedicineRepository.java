@@ -10,5 +10,5 @@ import java.util.List;
 public interface MedicineRepository extends MongoRepository<Medicine, String> {
     List<Medicine> findByNameContainingIgnoreCase(String name);
     List<Medicine> findByBatchContainingIgnoreCase(String batch);
-    List<Medicine> findByQuantityLessThanEqual(int threshold);
+    List<Medicine> findByStockLessThanEqual(int threshold); // Changed from quantity to stock
 }
